@@ -17,7 +17,7 @@ fun App() {
     var text by remember { mutableStateOf("Hello, World!") }
 
     val resourcesDir = File(System.getProperty("compose.application.resources.dir"))
-    println(resourcesDir.resolve("resource.txt").readText())
+    println(resourcesDir.resolve("common/resource.txt").readText())
 
     MaterialTheme {
         Button(onClick = {

@@ -19,6 +19,10 @@ dependencies {
     implementation(compose.desktop.currentOs)
 }
 
+compose {
+    kotlinCompilerPlugin.set("1.4.7")
+}
+
 compose.desktop {
     application {
         mainClass = "MainKt"
