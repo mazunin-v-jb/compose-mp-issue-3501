@@ -9,11 +9,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import java.io.File
 
 @Composable
 @Preview
 fun App() {
     var text by remember { mutableStateOf("Hello, World!") }
+
+    val resourcesDir = File(System.getProperty("compose.application.resources.dir"))
+    println(resourcesDir.resolve("resource.txt").readText())
 
     MaterialTheme {
         Button(onClick = {
